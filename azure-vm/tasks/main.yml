@@ -1,0 +1,8 @@
+---
+    - import_tasks: create_resourcegroup.yml
+    - import_tasks: create_virtualNetwork.yml
+    - import_tasks: add_subnet.yml
+    - import_tasks: create_publicIp.yml
+    - import_tasks: create_networkSecurityGroup.yml
+    - import_tasks: create_vm.yml
+
