@@ -1,8 +1,8 @@
 
 ---
     - name: Provision Virtual Machine on Google Compute Engine
-      hosts: localhost
-      connection: local
+      hosts: 10.136.54.100
+#       connection: local
       gather_facts: False
       roles:
         - gce-vm
