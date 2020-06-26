@@ -1,0 +1,8 @@
+
+---
+    - name: Provision Virtual Machine on Google Compute Engine
+      hosts: localhost
+      connection: local
+      gather_facts: False
+      roles:
+        - gce-vm
