@@ -1,0 +1,7 @@
+---
+# defaults file for vcenter-vm
+
+vm_name: NikhilAnsibleTower
+template: tmpl_centos7_20190515
+datacenter_name: DC-1
+cluster_name: Cluster-1

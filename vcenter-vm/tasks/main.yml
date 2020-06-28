@@ -1,0 +1,3 @@
+---
+# tasks file for vcenter-vm
+- import_tasks: deploy_vm.yml
