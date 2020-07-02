@@ -1,0 +1,14 @@
+---
+    - name: Create VM
+      azure_rm_virtualmachine:
+        resource_group: "{{ resource_group }}"
+        name: "{{ vm_Name }}"
+        vm_size: "{{ vm_size }}"
+        admin_username: "{{ os_user }}"
+        admin_password: Nick@94again
+    #   network_interfaces: "{{ vm_NIC }}"
+        image:
+            offer: "{{ vm_offer }}"
+            publisher: "{{ vm_pub }}"
+            sku: "{{ vm_sku }}"
+            version: latest

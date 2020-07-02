@@ -1,0 +1,7 @@
+---
+
+    - name: Terminate instance 
+      ec2:
+       state: 'absent'
+       instance_ids: '{{ instance_id }}'
+       region: '{{ region }}'
