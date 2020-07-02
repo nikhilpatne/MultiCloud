@@ -1,7 +1,7 @@
 ---
     - name: Launch the new EC2 Instance
       ec2: 
-        group: "{{ security_group }}" 
+        group: "{{ config_attributes.aws.security_group | default(security_group) }}" 
         instance_type: "{{ instance_type}}"
         image: "{{ image }}" 
         wait: true 
