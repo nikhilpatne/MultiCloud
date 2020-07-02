@@ -3,4 +3,4 @@
   tasks:
     - name: test
       debug:
-        msg: "{{ testvar }}"
+        msg: "{{ config_attributes.testvar }}"
