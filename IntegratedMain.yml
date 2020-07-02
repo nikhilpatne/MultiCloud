@@ -4,7 +4,7 @@
       connection: local
       gather_facts: False
       vars:
-         provider : "{{ provider }}"
+         provider:
 
 
       
@@ -14,10 +14,10 @@
       roles:
 
   
-        - { role: azure-vm , when:  (provider == 'azure') }
-        - { role: aws-ec2 , when: (provider == 'aws')}
-        - { role: gce-vm , when: provider == "gce"}
-        - { role: vcenter-vm , when: provider == "vc" }
+        - { role: azure-vm , when: ('azure' in provider)}
+        - { role: aws-ec2 , when: ('aws' in provider)}
+        - { role: gce-vm , when: ('gce' in provider)}
+        - { role: vcenter-vm , when: ('vc' in provider)}
 
       # tasks:
     
