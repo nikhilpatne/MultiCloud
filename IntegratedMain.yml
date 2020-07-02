@@ -1,7 +1,7 @@
 ---
     - name: Provision an  Instance
-      hosts: localhost
-      connection: local
+      hosts: 10.136.54.214
+#       connection: local
       gather_facts: False
       vars:
          provider: "{{ provider }}"
