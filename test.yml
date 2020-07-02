@@ -5,4 +5,4 @@
   tasks:
     - name: test
       debug:
-        msg: "{{ config_attributes.testvar | default(testvar) }}"
+        msg: "{{ config_attributes.aws.testvar | default(testvar) }}"
