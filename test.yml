@@ -1,8 +1,8 @@
 ---
 - hosts: 10.136.54.214
   vars:
-   testvar: "normal_msg"
+   config_attributes.testvar: "normal_msg"
   tasks:
     - name: test
       debug:
-        msg: "{{ config_attributes.testvar | default(testvar) }}"
+        msg: "{{ config_attributes.testvar }}"
