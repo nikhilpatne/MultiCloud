@@ -1,0 +1,6 @@
+---
+- hosts: 10.136.54.214
+  tasks:
+    - name: test
+      debug:
+        msg: "{{ testvar }}"
