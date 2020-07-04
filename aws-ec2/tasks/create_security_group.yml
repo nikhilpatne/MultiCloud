@@ -4,7 +4,7 @@
             module: ec2_group
             name: "{{ config_attributes.aws.security_group | default(security_group) }}"
             description: Security Group for webserver Servers
-            region: "{{ region }}"
+            region: "{{ config_attributes.aws.region | default(region) }}"
             rules:
               - proto: tcp
                 from_port: 22

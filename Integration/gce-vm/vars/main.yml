@@ -1,9 +1,0 @@
----
-
-
-    gcp_project: white-artwork-280915
-    gcp_cred_kind: serviceaccount
-    gcp_cred_file: "{{ role_path }}/files/white-artwork-280915-5d4f16b13798.json"
-    zone: "us-central1-a"
-    region: "us-central1"
-# vars file for gce-vm

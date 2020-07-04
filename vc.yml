@@ -1,7 +1,0 @@
----
-    - name: Provision an Instance On Vcenter
-      hosts:  10.136.54.214
-#       connection: local
-      gather_facts: False
-      roles:
-        - vcenter-vm

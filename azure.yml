@@ -1,8 +1,0 @@
-
----
-    - name: Provision Virtual Machine on Azure
-      hosts: 10.136.54.214
-#       connection: local
-      gather_facts: False
-      roles:
-        - azure-vm

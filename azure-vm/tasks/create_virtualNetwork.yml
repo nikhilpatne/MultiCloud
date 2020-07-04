@@ -2,6 +2,6 @@
 
   - name: Create virtual network
     azure_rm_virtualnetwork:
-      resource_group: "{{ resource_group }}"
-      name: "{{ vm_net }}"
+      resource_group: "{{ config_attributes.azure.resource_group | default(resource_group) }}"
+      name: "{{ config_attributes.azure.vm_network | default(vm_network) }}"
       address_prefixes: "10.0.0.0/16"

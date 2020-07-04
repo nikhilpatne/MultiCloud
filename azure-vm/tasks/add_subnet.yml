@@ -1,7 +1,7 @@
 ---
     - name: Add subnet
       azure_rm_subnet:
-        resource_group: "{{ resource_group }}"
-        name: "{{ vm_subnet }}"
+        resource_group: "{{ config_attributes.azure.resource_group | default(resource_group) }}"
+        name: "{{ config_attributes.azure.vm_subnet | default(vm_subnet) }}"
         address_prefix: "10.0.1.0/24"
-        virtual_network: "{{ vm_net }}"
+        virtual_network: "{{ config_attributes.azure.vm_network | default(vm_network) }}"

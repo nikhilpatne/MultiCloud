@@ -1,0 +1,24 @@
+---
+  - name: Provision an  Instance
+    hosts: localhost
+    connection: local
+    gather_facts: False
+    vars:
+       provider : "{{ provider }}"
+
+    
+    roles:
+
+
+    - { role: azure-vm , when: ('azure' in provider)}
+    - { role: aws-ec2 , when: ('aws' in provider)}
+    - { role: gce-vm , when: ('gce' in provider)}
+    - { role: vcenter-vm , when: ('vcenter' in provider)}
+
+
+    
+ 
+
+
+
+  

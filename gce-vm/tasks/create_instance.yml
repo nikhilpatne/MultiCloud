@@ -1,8 +1,8 @@
 ---
-    - name: create a instance
+    - name: create an instance
       gcp_compute_instance:
         state: present
-        name: test-vm
+        name: "{{ config_attributes.gce.vm_name | default(vm_name) }}"
         machine_type: n1-standard-1
         disks:
           - auto_delete: true

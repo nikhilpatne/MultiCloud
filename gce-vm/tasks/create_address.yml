@@ -2,7 +2,7 @@
 
    - name: create a address
      gcp_compute_address:
-        name: 'address-instance'
+        name: "{{ address_instance }}"
         region: "{{ region }}"
         project: "{{ gcp_project }}"
         auth_kind: "{{ gcp_cred_kind }}"

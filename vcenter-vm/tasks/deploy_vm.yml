@@ -1,18 +1,18 @@
 ---
-    - name: Deploy VM while cloning the template
+    - name: Deploy VM on Vcenter while cloning the template
       vmware_guest:
          hostname: "{{ vcenter_server }}"
          username: "{{ vcenter_user }}"
          password: "{{ vcenter_pass }}"
          validate_certs: False
-         name: "{{ vm_name }}"
-         template: "{{ template }}"
+         name: "{{ config_attributes.vcenter.vc_vm_name | default(vc_vm_name) }}"
+         template: "{{ config_attributes.vcenter.template | default(template) }}"
          datacenter: "{{ datacenter_name }}"
          folder: /{{ datacenter_name }}/vm/Workspace/Projects/CoPS/Nikhil
          cluster: "{{ cluster_name }}"
-         datastore: "NFS_Default-vcN"
+         datastore: "{{ datastore_name }}"
          networks:
-         - name: VMvLan10
+         - name: "{{ network_name }}"
            type: dhcp
         #  state: "{{ state }}"
          wait_for_ip_address: yes

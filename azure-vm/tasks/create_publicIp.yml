@@ -1,9 +1,9 @@
 ---
     - name: Create public IP address
       azure_rm_publicipaddress:
-        resource_group: "{{ resource_group }}"
+        resource_group: "{{ config_attributes.azure.resource_group | default(resource_group) }}"
         allocation_method: Static
-        name: "{{ vm_publicIP }}"
-      register:  reg_publicIP
+        name: "{{ vm_publicip }}"
+      register:  reg_publicip
       
-    - debug: var=reg_publicIP
+    - debug: var=reg_publicip

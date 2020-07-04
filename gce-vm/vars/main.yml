@@ -6,4 +6,10 @@
     gcp_cred_file: white-artwork-280915-5d4f16b13798.json
     zone: "us-central1-a"
     region: "us-central1"
+    vm_name : "test-vm"
+    network_instance : "network-instance"
+    address_instance: "address-instance"
+    disk_instance: "disk-instance"
+
+
 # vars file for gce-vm

@@ -1,8 +1,8 @@
 ---
     - name: Create a resource group
       azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        location: "{{ az }}"
+        name: "{{ config_attributes.azure.resource_group | default(resource_group) }}"
+        location: "{{ azure_zone }}"
         tags:
           testing: testing
           delete: never

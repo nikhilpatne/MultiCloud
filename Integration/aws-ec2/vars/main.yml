@@ -1,9 +1,0 @@
----
-# vars file for aws-ec2
- 
-instance_type: t2.micro
-security_group: NewSecGroup 
-image: ami-040c7ad0a93be494e 
-keypair: nikhilxento 
-region: ap-south-1 
-count: 1

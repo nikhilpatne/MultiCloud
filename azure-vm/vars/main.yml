@@ -5,16 +5,14 @@
     vm_pub: "OpenLogic"
     vm_sku: "7.4"
     vm_size: "Standard_B1ls"
-    az: "southeastasia"
-
-    vm_net: "myVNet"
+    azure_zone: "southeastasia"
+    vm_network: "myVNet"
     vm_subnet: "mySubnet"
-
-    vm_publicIP: "myPublicIP" 
-    vm_NSG: "myNSG"
-    vm_NIC: "myNIC2"
-    vm_Name: "Test01"
-
-    resource_group: "test_rg"
-
-    os_user: "azuser"
+    vm_publicip: "myPublicIP" 
+    vm_nsg: "myNSG"
+    vm_nic: "myNIC2"
+    vm_name: "Test01"
+    resource_group: "testResourceGroup01"
+    username: "azuser"
+    password: "gsLab!1231"
+    

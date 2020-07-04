@@ -1,7 +1,0 @@
----
-# defaults file for vcenter-vm
-
-vm_name: Nikhil_RHEL
-template: tmpl_RHEL7.4
-datacenter_name: DC-1
-cluster_name: Cluster-1

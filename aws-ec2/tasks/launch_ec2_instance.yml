@@ -2,11 +2,11 @@
     - name: Launch the new EC2 Instance
       ec2: 
         group: "{{ config_attributes.aws.security_group | default(security_group) }}" 
-        instance_type: "{{ instance_type}}"
-        image: "{{ image }}" 
+        instance_type: "{{ config_attributes.aws.instance_type | default(instance_type) }}"
+        image: "{{ config_attributes.aws.image | default(image) }}" 
         wait: true 
-        region: "{{ region }}"
-        keypair: "{{ keypair }}"
-        count: "{{count}}"
+        region: "{{ config_attributes.aws.region | default(region) }}"
+        keypair: "{{ config_attributes.aws.keypair | default(keypair) }}"
+        count: "{{ config_attributes.aws.count | default(count) }}"
                  
       register: ec2
