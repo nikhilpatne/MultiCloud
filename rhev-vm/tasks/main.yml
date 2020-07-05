@@ -9,7 +9,7 @@
       ovirt_vm:
         auth: "{{ ovirt_auth }}"
         state: present
-        name: "{{ config_attributes.rhev.vm_name | default(vm_name}}"
+        name: "{{ config_attributes.rhev.vm_name | default(vm_name) }}"
         memory_guaranteed: "{{ config_attributes.rhev.vm_memory | default(vm_memory) }}"
         cluster: "{{cluster}}"
         template: "{{template}}"
