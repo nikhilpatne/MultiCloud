@@ -14,6 +14,7 @@
     - { role: aws-ec2 , when: ('aws' in provider)}
     - { role: gce-vm , when: ('gce' in provider)}
     - { role: vcenter-vm , when: ('vcenter' in provider)}
+    - { role: rhev-vm , when: ('rhev' in provider)}
 
 
     

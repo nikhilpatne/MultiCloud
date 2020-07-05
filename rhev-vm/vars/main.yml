@@ -1,0 +1,10 @@
+---
+  url: https://rhevmgr.gslcbps.com/ovirt-engine/api
+  username: admin@internal
+  password: root
+  datacenter: Default
+  cluster: Default
+  template: sk_temp
+  vm_memory: 2GiB
+  vm_name: test7
+  vm_nic: vmnetwork

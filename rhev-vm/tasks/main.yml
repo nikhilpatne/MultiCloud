@@ -1,0 +1,36 @@
+---
+    - name: Login to RHEV
+      ovirt_auth:
+        url: "{{ url }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+
+    - name: Create a vm based on template on rhev 
+      ovirt_vm:
+        auth: "{{ ovirt_auth }}"
+        state: present
+        name: "{{vm_name}}"
+        memory_guaranteed: "{{vm_memory}}"
+        cluster: "{{cluster}}"
+        template: "{{template}}"
+        memory: "{{vm_memory}}"
+        wait: yes
+        state: running
+        description: "Testing VM"
+        operating_system: other
+        host: rhvhost2
+        type: server
+
+    - name: Configure network in rhev
+      ovirt_network:
+        auth: "{{ ovirt_auth }}"
+        name: "{{ vm_nic }}"
+        data_center: "{{ datacenter }}"
+
+    - name: Logout from RHEV
+      ovirt_auth:
+        state: absent
+        ovirt_auth: "{{ ovirt_auth }}"
+
+
+# tasks file for vm_rhev
